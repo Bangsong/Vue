@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义指令</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <input type="text" v-f>
+    <input type="text" v-focus>
+    <div v-test:msg.a.b="message"></div>
+</div>
+<script src="../js/11.js"></script>
+</body>
+</html>

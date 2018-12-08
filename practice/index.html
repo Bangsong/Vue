@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue练习列表</title>
+    <script src="../js/vue.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <ul>
+        <li v-for="practice in practiceList">
+            <a :href="practice.url">{{practice.name}}</a>
+            <ol>
+                <li v-for="knowledge in practice.data">{{knowledge.name}}
+                    <hr>
+                    <ol><li v-for="item in knowledge.list">{{item.name}}</li></ol>
+                    <br>
+                </li>
+            </ol>
+        </li>
+    </ul>
+</div>
+<script src="./js/index.js"></script>
+</body>
+</html>

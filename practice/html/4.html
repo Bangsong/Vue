@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <div>
+        <p :class="{'bg':isBg,'errorStyle':isError}">对象语法：{{msg}}</p>
+        <p :class="classes">计算属性绑定多个class：{{msg}}</p>
+        <p :class="[bg,fontStyle]">数组语法：{{msg}}</p>
+        <p :class="[isBg?bg:'']">三元运算符：{{msg}}</p>
+        <my-component :class="[isError?'errorStyle':'','bg']"></my-component>
+        <p :style="{'color':color,'font-size':fontSize+'px'}">绑定内联样式</p>
+        <p :style="styles">使用data绑定样式</p>
+        <p :style="styled">使用计算属性绑定样式</p>
+    </div>
+</div>
+<script src="../js/4.js"></script>
+</body>
+</html>

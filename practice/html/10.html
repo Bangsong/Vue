@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习2：标签页组件</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/10.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <tabs v-model="activeKey">
+        <pane label="标签一" name="1">
+            标签一的内容
+        </pane>
+        <pane label="标签二" name="2">
+            标签二的内容
+        </pane>
+        <pane label="标签三" name="3">
+            标签三的内容
+        </pane>
+    </tabs>
+</div>
+<script src="../js/pane.js"></script>
+<script src="../js/tabs.js"></script>
+<script src="../js/10.js"></script>
+</body>
+</html>

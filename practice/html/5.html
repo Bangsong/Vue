@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置指令</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <p v-once>
+        {{msg}}
+    </p>
+    <p v-if="number > 10">{{number}} > 10</p>
+    <p v-else-if="number > 5">{{number}} > 5</p>
+    <p v-else>{{number}} <= 5</p>
+    <button @click="add">number+1</button>
+    <p v-show="isShow">{{isShow}}</p>
+    <p v-for="item in list">{{item}}</p>
+</div>
+<script src="../js/5.js"></script>
+</body>
+</html>

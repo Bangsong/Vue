@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习4：外部关闭的下拉菜单</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/12.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <div class="main" v-clickoutside="handleClose">
+        <button @click="show = !show">点击显示下拉菜单</button>
+        <div class="dropdown" v-show="show">
+            <p>下拉框内容，点击外面区域可以关闭</p>
+        </div>
+    </div>
+</div>
+<script src="../js/12.js"></script>
+</body>
+</html>

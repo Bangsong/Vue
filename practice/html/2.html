@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指令和事件</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <div>
+        <a v-bind:href="url">当前页面</a>
+        <a :href="url">当前页面</a>
+    </div>
+    <div>
+        <p>{{number}}</p>
+        <button v-on:click="sub" v-bind:disabled="number == 0">-1</button>
+        <button @click="add">+1</button>
+    </div>
+</div>
+<script src="../js/2.js"></script>
+</body>
+</html>

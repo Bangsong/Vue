@@ -1,0 +1,13 @@
+[v-cloak]{
+    display: none;
+}
+.bg{
+    background-color: #5c6b77;
+}
+.fontStyle{
+    color:darkslategray;
+    font-size: 20px;
+}
+.errorStyle{
+    color: red;
+}

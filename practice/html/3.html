@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <div>
+        <p>基础属性：{{number}}</p>
+        <p>计算属性({{number}}*2)：{{numbered}}</p>
+    </div>
+</div>
+<script src="../js/3.js"></script>
+</body>
+</html>

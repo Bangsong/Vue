@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习2：数字输入框</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <input-number v-model="value" :min="0" :max="10" :step="5"></input-number>
+</div>
+<script src="../js/input-number.js"></script>
+<script src="../js/9.js"></script>
+</body>
+</html>

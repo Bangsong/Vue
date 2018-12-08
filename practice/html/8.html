@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <hr>
+    <my-component1></my-component1>
+    <hr>
+    <my-component2></my-component2>
+    <hr>
+    <table>
+        <tr is="my-component2"></tr>
+    </table>
+    <hr>
+    <my-component3></my-component3>
+    <hr>
+    <my-component4 message="父组件数据"></my-component4>
+    <hr>
+    <my-component4 :message="msg"></my-component4>
+    <hr>
+    <my-component5 :message="msg"></my-component5>
+    <hr>
+    <my-component6 :width="100"></my-component6>
+    <hr>
+    <my-component8 :prop-data="num"></my-component8>
+    <hr>
+    <my-component9 :number="num" @increase="getNumber" @reduce="getNumber"></my-component9>
+    <p>{{num}}</p>
+    <my-component10 v-model="num" :number="num"></my-component10>
+    <hr>
+    <p>父组件内容：{{msg}}</p>
+    <my-component11></my-component11>
+    <hr>
+    <my-component12 ref="com1"></my-component12>
+    <button @click="getChildVal">打印com1组件的msg</button>
+    <hr>
+    <my-component13>
+        <div>父组件内容</div>
+    </my-component13>
+    <hr>
+    <my-component14>
+        <h2 slot="header">标题</h2>
+        <p>正文</p>
+        <template scope="props">
+            <p>{{props.msg}}</p>
+        </template>
+        <div slot="footer">底部信息</div>
+    </my-component14>
+    <hr>
+    <my-component15 :count="1"></my-component15>
+    <hr>
+    <my-component16 inline-template>
+        <div>
+            <h2>在父组件中定义子组件的模板</h2>
+            <p>{{message}}</p>
+        </div>
+    </my-component16>
+    <hr>
+    <button @click="changeCom(1)">切换组件1</button>
+    <button @click="changeCom(2)">切换组件2</button>
+    <component :is="comView"></component>
+    <hr>
+    <my-component17></my-component17>
+    <hr>
+    <my-component18></my-component18>
+    <my-component19></my-component19>
+    <div id="comID"></div>
+</div>
+<script type="text/x-template" id="my-component19">
+<div>x-template写组件</div>
+</script>
+<script src="../js/8.js"></script>
+</body>
+</html>

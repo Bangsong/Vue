@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习5：问卷调查</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <div>
+        <div v-if="page == 1">
+            <div>
+                <p>请问您的性别</p>
+                <div>
+                    <input type="radio" name=“sex" v-model="radioed" value="男" id="man"><label for="man">男</label>
+                    <input type="radio" name="sex" v-model="radioed" value="女" id="woman"><label for="woman">女</label>
+                    <input type="radio" name="sex" v-model="radioed" value="保密" id="sex"><label for="sex">保密</label>
+                </div>
+            </div>
+        </div>
+        <div v-else-if="page == 2">
+            <p>请选择您的兴趣爱好：</p>
+            <div>
+                <input type="checkbox" name=“hobby" v-model="checked" value="看书" id="book"><label for="book">看书</label>
+                <input type="checkbox" name="hobby" v-model="checked" value="跑步" id="run"><label for="run">跑步</label>
+                <input type="checkbox" name="hobby" v-model="checked" value="看电影" id="movie"><label for="movie">看电影</label>
+                <input type="checkbox" name="hobby" v-model="checked" value="听音乐" id="music"><label for="music">听音乐</label>
+            </div>
+        </div>
+        <div v-else-if="page == 3">
+            <p>请介绍一下自己</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <button @click="next" v-if="page != 3" :disabled="(page == 1 && radioed == '') || (page == 2 && checked.length < 2)">下一步</button>
+        <button @click="reset">重置</button>
+    </div>
+</div>
+<!--<script src="../js/button.js"></script>-->
+<script src="../js/14.js"></script>
+</body>
+</html>

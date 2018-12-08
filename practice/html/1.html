@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定</title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <div><a :href="indexUrl">返回首页</a></div>
+    <p>{{msg}}</p>
+    <p v-html="msg1"></p>
+    <input type="text" v-model="msg">
+    <p v-pre>{{msg}}</p>
+    <p>{{msg2|formatStr}}</p>
+    <p>{{number|formatNum3|formatNum7}}</p>
+    <p>{{number|formatNum(3.1415926)}}</p>
+</div>
+<script src="../js/1.js"></script>
+</body>
+</html>
